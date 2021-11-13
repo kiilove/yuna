@@ -60,9 +60,23 @@ export const FlexBox = styled.div`
 
 export const Textgraphy = styled.span`
   display: ${(props) => (props.display ? props.display : "block")};
+  vertical-align: ${(props) =>
+    props.verticalAlign ? props.verticalAlign : "middle"};
+  justify-content: ${(props) =>
+    props.container
+      ? "flex-start"
+      : props.justifyContent
+      ? props.justifyContent
+      : "center"};
+  align-items: ${(props) =>
+    props.container
+      ? "flex-start"
+      : props.alignItems
+      ? props.alignItems
+      : "center"};
   width: ${(props) => (props.width ? props.width : "100%")};
-  height: ${(props) => (props.height ? props.height : "30px")};
-  font-size: ${(props) => (props.fontSize ? props.fontSize : "19px")};
+  height: ${(props) => props.height && props.height};
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "1em")};
   font-weight: ${(props) => (props.fontWeight ? props.fontWeight : 300)};
   color: ${(props) => (props.color ? props.color : blueGrey[800])};
   text-align: ${(props) => (props.textAlign ? props.textAlign : "center")};
@@ -71,7 +85,7 @@ export const Textgraphy = styled.span`
   padding-bottom: ${(props) => props.pb && props.pb};
   padding-left: ${(props) => props.pl && props.pl};
   padding-right: ${(props) => props.pr && props.pr};
-  margin: ${(props) => props.ma && props.ma};
+  margin: ${(props) => (props.ma ? props.ma : "auto auto")};
   margin-top: ${(props) => props.mt && props.mt};
   margin-bottom: ${(props) => props.mb && props.mb};
   margin-left: ${(props) => props.ml && props.ml};

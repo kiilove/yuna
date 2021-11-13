@@ -29,26 +29,27 @@ const Edubridge = () => {
           )}
 
           <FlexBox
+            height="3.5em"
             width="100%"
+            justifyContent="center"
+            alignItems="center"
             style={{
               background: "rgb(34,89,195)",
               background:
                 "radial-gradient(circle, rgba(34,89,195,1) 0%, rgba(126,253,45,1) 100%)",
             }}
+            mt="10px"
+            mb="10px"
           >
-            <Textgraphy
-              fontSize="38px"
-              height="100px"
-              fontWeight="700"
-              mt="30px"
-              mb="10px"
-              color="whitesmoke"
-            >
+            <Textgraphy fontSize="1.5em" fontWeight="700" color="whitesmoke">
               빠른 상담 조유나 실장(010-5850-7733)
             </Textgraphy>
           </FlexBox>
         </>
       ))}
+      <FlexBox>
+        <img src="./img/namecard/yuna.jpg" width="90%" alt="" />
+      </FlexBox>
     </FlexBox>
   );
 };
