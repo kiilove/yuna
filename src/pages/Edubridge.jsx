@@ -38,7 +38,7 @@ const Edubridge = () => {
           >
             <Textgraphy
               fontSize="38px"
-              height="70px"
+              height="100px"
               fontWeight="700"
               mt="30px"
               mb="10px"
